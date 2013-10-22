@@ -1,0 +1,30 @@
+#include <string.h>
+#include <stdio.h>
+int main()
+{
+    int i,j,x,stepen,dva;
+    char a[255];
+    printf("Vvedite zapis':");
+    gets(a);     
+    stepen=strlen(a)-1;
+    x=0;  
+    dva=1;
+    i=0;
+    while(stepen>=0)
+    {
+     if (a[i]=='1')
+     {
+      for(j=0;j<stepen;j++)
+      {
+       dva*=2;
+      }
+      x+=dva;
+     }
+     dva=1;
+     i++;
+     stepen--;
+    }
+    printf("Chislo=%i",x);
+    getchar();
+return 0;
+}
